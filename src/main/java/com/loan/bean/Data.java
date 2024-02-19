@@ -1,4 +1,4 @@
-package com.job.bean;
+package com.loan.bean;
 
 /**
  * 数据实体类

@@ -1,7 +1,7 @@
-package com.job.config;
+package com.loan.config;
 
 
-import com.job.util.Constant;
+import com.loan.util.Constant;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;

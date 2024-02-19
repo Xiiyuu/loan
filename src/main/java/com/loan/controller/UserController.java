@@ -1,9 +1,9 @@
-package com.job.controller;
+package com.loan.controller;
 
-import com.job.bean.ResultObject;
-import com.job.bean.TUser;
-import com.job.service.IUserService;
-import com.job.util.Constant;
+import com.loan.bean.ResultObject;
+import com.loan.bean.TUser;
+import com.loan.service.IUserService;
+import com.loan.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

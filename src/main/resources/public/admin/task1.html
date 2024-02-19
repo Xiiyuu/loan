@@ -192,41 +192,10 @@
                     type: 2,
                     content: "/userCenter/xyDetai.html",
                     area: ['300px', '250px'],
-                    success: function (layero, index) {
-                        var body = layui.layer.getChildFrame('body', index);
-                        body.find("#xy_job_id").text(data.job_id);
-                        body.find("#xy_job_name").text(data.job_name);
-                        body.find("#xy_job_salary").text(data.job_salary);
-                        body.find("#xy_job_degree").text(data.job_degree);
-                        body.find("#xy_job_work_year").text(data.job_work_year);
-                        body.find("#xy_job_company_size").text(data.job_company_size);
-                        body.find("#xy_job_company_type").text(data.job_company_type);
-                        body.find("#xy_job_city").text(data.job_city);
-                    }
                 });
             }
         });
-        var active = {
-            search: function () {
-                var job_name = $("#text_job_name").val();
-                var job_city = $("#text_job_city").val();
-                var job_degree = $("#txt_job_degree").val();
-                var job_work_year = $("#txt_job_work_year").val();
-                var job_company_type = $("#txt_job_company_type").val();
-                table.reload('idTest', {
-                    method: 'POST'
-                    ,
-                    where: {
-                        "job_name": job_name,
-                        "job_city": job_city,
-                        "job_degree": job_degree,
-                        "job_work_year": job_work_year,
-                        "job_company_type": job_company_type
-                    },
-                    page: {curr: 1}
-                })
-            }
-        };
+
 
         $('#studentSearch .layui-btn').on('click', function () {
             var type = $(this).data('type');

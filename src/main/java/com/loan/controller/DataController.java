@@ -1,10 +1,10 @@
-package com.job.controller;
+package com.loan.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.job.bean.Data;
-import com.job.bean.ResultObject;
-import com.job.service.DataService;
-import com.job.util.Constant;
+import com.loan.bean.Data;
+import com.loan.bean.ResultObject;
+import com.loan.service.DataService;
+import com.loan.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * 职位数据的控制器
  */
-@RequestMapping("/job")
+@RequestMapping("/loan")
 @RestController
 public class DataController {
 
@@ -141,20 +141,5 @@ public class DataController {
         return rs;
     }
 
-    /**
-     * 各城市职位平均薪资涨幅变化趋势图
-     */
-    @RequestMapping("/getTask7") //标识请求地址
-    public ResultObject<Object> getTask7(@RequestParam("job_city") String job_city) {
-        // 1.统一返回
-        ResultObject<Object> rs = new ResultObject<Object>();
-        // 2.各城市职位平均薪资涨幅变化趋势图
-        List dataList = dataService.getTask7(job_city);
-        // 3.返回获取到的数据
-        rs.setData(dataList);
-        rs.setCode(Constant.SUCCESS_RETUEN_CODE);
-        rs.setMsg("success");
-        return rs;
-    }
 
 }

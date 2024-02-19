@@ -1,10 +1,10 @@
-package com.job.service.impl;
+package com.loan.service.impl;
 import com.github.pagehelper.PageHelper;
 
 import com.github.pagehelper.PageInfo;
-import com.job.bean.Data;
-import com.job.mapper.DataMapper;
-import com.job.service.DataService;
+import com.loan.bean.Data;
+import com.loan.mapper.DataMapper;
+import com.loan.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -114,9 +114,5 @@ public class DataImpl implements DataService {
         return dataMapper.getTask6();
     }
 
-    @Override
-    public List<Integer> getTask7(String job_city) {
-        return null;
-    }
 
 }

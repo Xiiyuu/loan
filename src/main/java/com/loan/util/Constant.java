@@ -1,4 +1,4 @@
-package com.job.util;
+package com.loan.util;
 
 public class Constant {
     public static String globaPath;

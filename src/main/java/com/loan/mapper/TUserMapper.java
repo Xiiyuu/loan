@@ -1,6 +1,6 @@
-package com.job.mapper;
+package com.loan.mapper;
 
-import com.job.bean.TUser;
+import com.loan.bean.TUser;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

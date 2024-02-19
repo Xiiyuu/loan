@@ -1,6 +1,6 @@
-package com.job.service;
+package com.loan.service;
 
-import com.job.bean.TUser;
+import com.loan.bean.TUser;
 
 /**
  * 用户服务接口

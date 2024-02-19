@@ -1,6 +1,6 @@
-package com.job.mapper;
+package com.loan.mapper;
 
-import com.job.bean.Data;
+import com.loan.bean.Data;
 import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.Mapper;
 

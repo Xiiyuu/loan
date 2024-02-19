@@ -1,9 +1,9 @@
-package com.job.service.impl;
+package com.loan.service.impl;
 
 
-import com.job.bean.TUser;
-import com.job.mapper.TUserMapper;
-import com.job.service.IUserService;
+import com.loan.bean.TUser;
+import com.loan.mapper.TUserMapper;
+import com.loan.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

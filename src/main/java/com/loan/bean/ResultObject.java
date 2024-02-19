@@ -1,4 +1,4 @@
-package com.job.bean;
+package com.loan.bean;
 
 /**
  * 该类用于自定义jonsn串的输出

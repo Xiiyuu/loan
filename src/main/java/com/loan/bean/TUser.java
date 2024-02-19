@@ -1,4 +1,4 @@
-package com.job.bean;
+package com.loan.bean;
 
 import org.springframework.stereotype.Component;
 

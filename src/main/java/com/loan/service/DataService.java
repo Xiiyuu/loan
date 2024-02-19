@@ -1,7 +1,7 @@
-package com.job.service;
+package com.loan.service;
 
 import com.github.pagehelper.PageInfo;
-import com.job.bean.Data;
+import com.loan.bean.Data;
 
 
 import java.util.List;
@@ -48,9 +48,5 @@ public interface DataService {
      */
     List<Integer> getTask6();
 
-    /**
-     * 各城市职位平均薪资涨幅变化趋势图
-     */
-    List<Integer> getTask7(String job_city);
 
 }
