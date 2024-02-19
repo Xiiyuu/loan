@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>农户贷款信用评估云平台</title>
+    <link rel="icon" href="/assets/images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="/assets/css/login.css" media="all"/>
+    <script src="/assets/js/jquery.min.js"></script>
+    <style>
+        .layui-input {
+            background-color: inherit;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-row">
+    <div class="layui-col-sm12 layui-col-md12">
+        <div class="layui-carousel login_height" id="login" lay-filter="login">
+            <div carousel-item="">
+                <div>
+                    <div class="login_cont"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login_main">
+    <fieldset class="layui-elem-field layui-field-title margin_02">
+        <legend>欢迎登陆 - 农户贷款信用评估云平台</legend>
+    </fieldset>
+    <div class="layui-row layui-col-space15">
+        <form class="layui-form pad_01" action="">
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-form-item">
+                    <input type="text" id="userName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
+                    <i class="layui-icon layui-icon-username login_icon"></i>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-form-item">
+                    <input type="password" id="password" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
+                    <i class="layui-icon layui-icon-password login_icon"></i>
+                </div>
+            </div>
+
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-row">
+                    <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
+                        <div class="layui-form-item">
+                            <input type="text" name="vercode" id="vercode" lay-verify="required|vercodes" autocomplete="off" placeholder="验证码" class="layui-input" maxlength="4">
+                            <i class="layui-icon layui-icon-vercode login_icon"></i>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
+                        <div class="login_vercode VerCode" onclick="VerCode()" id="ImgVerCode" style="color: #5d7db3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12" style="margin-top: 30px">
+                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1" style="background-color: #5d7db3;color: #e1e4ea">立即登录</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/layui/layui.js"></script>
+<script type="text/javascript" src="/assets/assembly/jqarticle/jparticle.min.js"></script>
+<script type="text/javascript" src="/assets/assembly/VerificationCode/VerificationCode.js"></script>
+<script>
+    function doLogin() {
+        var v_userName = $("#userName").val();
+        var v_pwd = $("#password").val();
+        var v_user = new Object();
+        v_user.username = v_userName;
+        v_user.password = v_pwd;
+        var str = JSON.stringify(v_user);
+        var param = JSON.parse(str);
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/user/adminlogin",
+            data: param,
+            success: function (result) {
+                if (result.code == "0") {
+                    location.href = "/admin/index.html";
+                } else {
+                    layer.msg(result.msg, {
+                        icon: 5
+                    });
+                }
+            },
+            error: function () {
+                layer.msg('服务器错误', {
+                    icon: 5
+                });
+            }
+        });
+    }
+
+    layui.use(['carousel', 'form'], function () {
+        var carousel = layui.carousel, form = layui.form;
+        form.verify({
+            userName: function (value) {
+                if (value.length < 2) {
+                    return '账号至少得2个字符';
+                }
+            }
+            , pass: [/^[\S]{1,12}$/, '密码必须1到12位，且不能出现空格']
+            , vercodes: function (value) {
+                //获取验证码
+                var VerCode = $(".VerCode").html();
+                if (value != VerCode) {
+                    return '验证码错误（区分大小写）';
+                }
+            }
+            , content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function (data) {
+            doLogin();
+            return false;
+        });
+
+        //设置轮播主体高度
+        var login_height = $(window).height();
+        var car_height = $(".login_height").css("cssText", "height:" + login_height + "px!important");
+
+        //Login轮播主体
+        carousel.render({
+            elem: '#login'
+            , width: '100%'
+            , height: 'car_height'
+            , arrow: 'always'
+            , anim: 'fade'
+            , autoplay: true
+            , arrow: 'hover'
+            , indicator: 'none'
+            , interval: '5000'
+        });
+
+        //粒子线条
+        $(".login_cont").jParticle({
+            background: "#ffffff",
+            color: "#0f21ab",
+            particlesNumber: 100,
+            particle: {
+                minSize: 1,
+                maxSize: 3,
+                speed: 30,
+            }
+        });
+    });
+
+</script>
+</body>
+</html>

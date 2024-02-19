@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="/assets/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/admin/css/admin.css"/>
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/layui/lay/modules/layer.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="page-content-wrap" id="studentSearch">
+    <div class="layui-form-item">
+        <div id="speedChart">
+            <div id="speedChartMain" style="width: 1000px; height: 500px;"></div>
+        </div>
+    </div>
+    <script type="text/html" id="barDemo">
+	</script>
+</div>
+
+<script type="text/javascript">
+    var x_stu_name = [];
+    var y_avg_score = [];
+    $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/job/getTask2",
+            success: function (result) {
+                if (result.code == "0") {
+                    x_stu_name.length = 0;
+                    y_avg_score.length = 0;
+                    var list = result.data;
+                    for (i = 0; i < list.length; i++) {
+                        y_avg_score.push(list[i].ApprovalRate.toFixed(2));
+                        x_stu_name.push(list[i].marital_status);
+                    }
+                    initChart();
+                }
+            },
+            error: function () {
+                layer.msg('服务器错误', {
+                    icon: 5
+                });
+            }
+        });
+
+
+
+    function initChart() {
+        var myChart = echarts.init(document.getElementById('speedChartMain'));
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['借贷成功率'],
+                axisLabel: {
+                    fontSize: 16  // 设置数字字体大小为12
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                name: '婚姻状况',
+                type: 'category',
+                axisLabel: {
+                    rotate: 0,
+                    fontSize: 20, // 设置字体大小为12
+                    formatter: function (value) {
+                        if (value === '0') {
+                            return '已婚';
+                        } else if (value === '1') {
+                            return '单身';
+                        } else if (value === '2') {
+                            return '离婚';
+                        }
+                    }
+                },
+                data: x_stu_name
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    fontSize: 16  // 设置数字字体大小为12
+                },
+                min: 0,  // 设置最小值为0
+                max: 0.5   // 设置最大值为0.5
+            },
+            series: [
+                {
+                    name: '平均薪水',
+                    type: 'bar',
+                    data: y_avg_score,
+                    itemStyle: {
+                        normal: {
+                            color: 'blue',
+                            label: {
+                                show: true,
+                                position: 'top',
+                            }
+                        }
+                    },
+                }
+            ]
+        };
+        layer.open({
+            title: '',
+            type: 1,
+            shade: false,
+            area: ['620px', '660px'],
+            shadeClose: false,
+            content: $("#speedChart")
+        });
+        myChart.setOption(option);
+    }
+
+</script>
+</body>
+</html>

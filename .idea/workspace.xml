@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e934ca23-e341-493f-b8f0-43a734d68d0a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/loan" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\soft\maven_repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../maven" />
+        <option name="userSettingsFile" value="D:\soft\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectId" id="1pvriLavEm6HYRrMyA2KzYOS8zy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/IdeaProjects/loan",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "a9d45d2bd079a68e2da268190f58e053",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\soft\java_data_show\src\main\resources\public\assets\images" />
+      <recent name="D:\soft\java_job_show\src\main\resources\public\assets\images" />
+      <recent name="D:\App\App_Idea\App_Idea_Project\other\java_job_show\src\main\resources\public\admin" />
+      <recent name="D:\App\App_Idea\App_Idea_Project\other\java_job_show\src\main\java\com\job\controller" />
+      <recent name="D:\App\App_Idea\App_Idea_Project\other\java_job_show\src\main\java\com\job\interceptor" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.StartApplication">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/java_job_show/public/admin/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="job.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/java_data_show/public/admin/job.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/java_job_show/public/admin/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="StartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="loan" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.job.boot.StartApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.job.boot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.StartApplication" />
+        <item itemvalue="JavaScript 调试.job.html" />
+        <item itemvalue="JavaScript 调试.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e934ca23-e341-493f-b8f0-43a734d68d0a" name="Default Changelist" comment="" />
+      <created>1616074530641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616074530641</updated>
+      <workItem from="1616074531793" duration="8176000" />
+      <workItem from="1616120381183" duration="683000" />
+      <workItem from="1616133560157" duration="220000" />
+      <workItem from="1616134778224" duration="375000" />
+      <workItem from="1616144177543" duration="15000" />
+      <workItem from="1616158780187" duration="1552000" />
+      <workItem from="1616160405648" duration="694000" />
+      <workItem from="1616161169914" duration="2000" />
+      <workItem from="1616203303974" duration="662000" />
+      <workItem from="1616465172489" duration="67000" />
+      <workItem from="1616593294461" duration="386000" />
+      <workItem from="1637946100736" duration="1657000" />
+      <workItem from="1684335332167" duration="645000" />
+      <workItem from="1684336403793" duration="2005000" />
+      <workItem from="1684463202744" duration="10252000" />
+      <workItem from="1684718162078" duration="1617000" />
+      <workItem from="1684737012635" duration="1083000" />
+      <workItem from="1685081668249" duration="5391000" />
+      <workItem from="1685087386672" duration="25000" />
+      <workItem from="1685087421030" duration="12619000" />
+      <workItem from="1685110108299" duration="2471000" />
+      <workItem from="1685254449445" duration="4672000" />
+      <workItem from="1685387160398" duration="6000" />
+      <workItem from="1685452918845" duration="36000" />
+      <workItem from="1696696955114" duration="937000" />
+      <workItem from="1696698173556" duration="29631000" />
+      <workItem from="1696909585158" duration="6939000" />
+      <workItem from="1696926567461" duration="1859000" />
+      <workItem from="1698795860554" duration="36000" />
+      <workItem from="1699371639270" duration="259000" />
+      <workItem from="1699371907575" duration="411000" />
+      <workItem from="1708330316073" duration="372000" />
+      <workItem from="1708330757271" duration="1108000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+</project>
